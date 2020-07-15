@@ -32,7 +32,7 @@ function errorLog (error) {
 
 // 基础设置
 let baseConfig = {
-    baseURI: process.env.REQUEST_BASE_URL || '/', // 请求的地址，正在 .env 设置 REQUEST_BASE_URL
+    baseURL: process.env.REQUEST_BASE_URL || '/', // 请求的地址，正在 .env 设置 REQUEST_BASE_URL
     timeout: 5000 // 请求超时时间
 };
 
@@ -60,7 +60,7 @@ service.interceptors.request.use(
 )
 
 // 返回拦截
-axios.interceptors.response.use(
+service.interceptors.response.use(
     response => {
         // dataAxios 是 axios 返回数据中的 data
         const dataAxios = response.data;
@@ -110,3 +110,4 @@ axios.interceptors.response.use(
         return Promise.reject(error)
     }
 )
+module.exports = service;
