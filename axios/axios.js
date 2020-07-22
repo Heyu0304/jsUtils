@@ -1,5 +1,5 @@
 import axios from 'axios';
-import log from "@utils/util.log"
+import log from "../log/util.log"
 
 // 创建一个错误，对错误进行处理, 可以对错误进行收集到状态里面，添加日志
 function errorCreate (msg) {
