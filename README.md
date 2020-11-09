@@ -15,3 +15,13 @@
 
 前端打印日志处理，对 default 、primary、success、warning、danger 进行按颜色打印处理。
 
+
+## 4. dateFormat
+对时间函数的的处理，把Date 转换成 "YYYY-mm-dd HH:MM" 格式。
+
+```js
+  let date = new Date();
+  let new_date = dateFormat("YYYY-mm-dd HH:MM", date);
+  console.log(new_date)
+```
+
